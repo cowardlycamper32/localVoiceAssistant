@@ -30,7 +30,7 @@ class Status:
                 if self.perms.exceptExternalAPICommands():
                     query = query.replace("assistant", "")
                     print(query)
-                    results = api.search(q=query, apikey="d4d4cd92f4314e493fbcde0dbd0836a43ee1c9de7ddd02727a4e3429ca30ca05", location="London, England, United Kingdom")
+                    results = api.search(q=query, apikey="", location="London, England, United Kingdom")
                     closestPlace = results["local_results"]["places"][0]
                     print(f"{closestPlace["title"]} at {closestPlace["address"]}")
                 else:
